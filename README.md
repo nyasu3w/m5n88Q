@@ -2,8 +2,13 @@
 PC-8801 emulator[QUASI88] for M5Stack Core2 (WIP)
 
 This is a fork to support M5Stack Core2 with M5Unified from the original only for M5Stack FIRE.
-The original readme is following.
 
+## Note
+- you might change the board setting in platformio.ini
+- NO SOUND supported
+- SLOW
+
+The original readme is following.
 
 --------
 
