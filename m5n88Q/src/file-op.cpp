@@ -4,7 +4,8 @@
 /*	仕様の詳細は、ヘッダファイル file-op.h 参照			     */
 /*									     */
 /*****************************************************************************/
-#include<M5Stack.h>
+#include<M5Unified.h>
+#include<SD.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>

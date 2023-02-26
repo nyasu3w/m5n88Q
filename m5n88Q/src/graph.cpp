@@ -4,11 +4,7 @@
  *	詳細は、 graph.h 参照
  ************************************************************************/
 #pragma GCC optimize ("O3")
-#include<M5Stack.h>
-#define LGFX_AUTODETECT
-#define LGFX_USE_V1
-#include <LovyanGFX.hpp>
-#include <LGFX_AUTODETECT.hpp> 
+#include<M5Unified.h>
 extern "C"{
 #include <stdio.h>
 #include <stdlib.h>
@@ -22,7 +18,7 @@ static	T_GRAPH_SPEC	graph_spec;		/* 基本情報		*/
 static	int		graph_exist;		/* 真で、画面生成済み	*/
 static	T_GRAPH_INFO	graph_info;		/* その時の、画面情報	*/
 
-static LGFX lcd;
+static M5GFX lcd = M5GFX();
 
 uint8_t needDrawUpdateFlag;
 uint8_t nowDrawingFlag;
@@ -83,7 +79,7 @@ const T_GRAPH_INFO	*graph_setup(int width, int height,
         Serial.print(":");
         Serial.println(height);
 	    buffer = (unsigned char*)ps_malloc(width * height * sizeof(unsigned short));
-	    if (buffer == FALSE) {
+	    if (!buffer) {
 		return NULL;
 	    }
 	}

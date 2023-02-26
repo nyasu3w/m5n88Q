@@ -4,7 +4,8 @@
 /*									*/
 /************************************************************************/
 
-#include <M5Stack.h>
+#include <M5Unified.h>
+#include <SD.h>
 extern "C" {
 #include <stdio.h>
 #include <stdlib.h>
@@ -19,6 +20,8 @@ extern "C" {
 #include "menu.h"	/* menu_about_osd_msg */
 #include "event.h"
 }
+
+static char const *COMPATROM_FILENAME="/PC88ROM/PC88.ROM";
 
 /***********************************************************************
  * メイン処理
@@ -37,7 +40,7 @@ int	quasi88main(void)
 					   コールバック関数を登録する */
 	Serial.println("at exit ok");
 
-   
+	if(SD.exists(COMPATROM_FILENAME)) file_compatrom=filename_alloc_romname(COMPATROM_FILENAME);
 
 	quasi88();			/* PC-8801 エミュレーション */
 

@@ -3,7 +3,9 @@
  *
  *	詳細は、 event.h 参照
  ************************************************************************/
-#include <M5Stack.h>
+#include <M5Unified.h>
+#include <Wire.h>
+#include <SD.h>
 #include "quasi88.h"
 #include "device.h"
 #include "initval.h"
