@@ -16,7 +16,8 @@ or you can use VisualStudioCode PlatformIO extension.
 - SD card is necessary to store ROM images, DISK images and so on
 - Store the ROM images in /PC88ROM/ in SD
 - Store the DISK images in /PC88ROM/DISK/ in SD
-- Press BtnB to select disk menu. Press BtnC to system menu.
+- Press BtnB to select disk menu. Press BtnC to system menu
+- Keyboard input is from M5Stack CardKB or serial console
 
 Enjoy!
 
