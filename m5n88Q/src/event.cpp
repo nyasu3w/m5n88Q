@@ -732,6 +732,7 @@ void selectDisk()
     d88FileRoot.close();
 
     delay(10);
+    M5.Lcd.println("T"); // work around for unknown behavior
     M5.Lcd.fillScreen(TFT_BLACK);
     delay(10);
     M5.Lcd.setTextSize(2);
@@ -1048,6 +1049,7 @@ void systemMenu()
             ""};
 
     delay(10);
+    M5.Lcd.println("T"); // work around for unknown behavior
     M5.Lcd.fillScreen(TFT_BLACK);
     delay(10);
     M5.Lcd.setTextSize(2);
@@ -1063,8 +1065,9 @@ void systemMenu()
     {
         if (needRedraw == true)
         {
-            M5.Lcd.fillScreen(0);
+            M5.Lcd.fillScreen(TFT_BLACK);
             M5.Lcd.setCursor(0, 0);
+
             for (int index = 0; index < menuItemCount; index++)
             {
                 if (index == selectIndex)
@@ -1109,6 +1112,7 @@ void systemMenu()
 
             needRedraw = false;
         }
+
         M5.update();
         if (M5.BtnA.wasReleased())
         {
